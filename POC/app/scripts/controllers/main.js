@@ -9,7 +9,6 @@ angular.module('pocApp')
     ];
   });
 
-
 function MyController($scope, $http) {
     $scope.items = [];
     $scope.getItems = function() {
@@ -21,4 +20,3 @@ function MyController($scope, $http) {
                 alert("Error");
             });
     }};
-
