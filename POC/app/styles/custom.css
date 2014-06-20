@@ -7,7 +7,8 @@ body {
 
 header, footer {
 	text-align: center;
-	color: gray;
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .home, .gen_details, .score, .away {
@@ -22,3 +23,10 @@ header, footer {
 	opacity: .95;
 }
 
+.game {
+	border-bottom: 1px solid gray;
+}
+
+section img {
+	border: 1px solid gray;
+}

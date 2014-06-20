@@ -13,7 +13,7 @@ angular.module('pocApp')
 function MyController($scope, $http) {
     $scope.items = [];
     $scope.getItems = function() {
-        $http({method : 'GET',url : 'http://localhost:8080/worldcup/v1/results'})
+        $http({method : 'GET',url : 'http://192.168.89.15:8080/worldcup/v1/results'})
             .success(function(data, status) {
                 $scope.items = data;
             })
@@ -21,3 +21,4 @@ function MyController($scope, $http) {
                 alert("Error");
             });
     }};
+

@@ -6,7 +6,7 @@
   <div ng-controller="MyController">
 
     <button type="button" ng-click="getItems()" class="btn get_results">Get Results</button>
-    <div ng-repeat="item in items"  class="container row">
+    <div ng-repeat="item in items"  class="container row game">
 
       <section class="gen_details col-md-2"> 
         {{item.date}} <br> 
@@ -16,6 +16,7 @@
       </section>
 
       <section class="home col-md-4">
+        <img src="{{item.hFlag}}" class="image-responsive">
         {{item.home}}
       </section>
 
@@ -24,6 +25,7 @@
       </section>
 
       <section class="away col-md-4">
+        <img src="{{item.aFlag}}" class="image-responsive">
         {{item.away}}
       </section>
 
