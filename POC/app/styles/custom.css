@@ -28,7 +28,7 @@ header, footer {
 }
 
 section img {
-    border: 1px solid rgb(245, 245, 245);
+    border: 1px solid gray;
 }
 
 input {

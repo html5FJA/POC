@@ -3,17 +3,15 @@
 </header>
 
 <div class="container box">
-  <div ng-controller="MyController" data-ng-init="getItems()">
-
+  <div ng-controller="MyController" ng-init="getResults()">
     <ul class="nav nav-tabs">
-      <li class="active" ng-click="getItems()" class="btn get_results">
-        <a href="#">Game Results</a></li>
-      <li><a href="#">Scheduled Games</a></li>
-      <li><a href="#">Live Games</a></li>
+      <li class="active" ng-click="getResults()"><a>Get Results</a></li>
+      <li ng-click="getSchedule()"><a>Scheduled Games</a></li>
+      <li ng-click="getLive()"><a>Live Games</a></li>
     </ul>
 
     <input ng-model="query" placeholder="Filter">
-    <div ng-repeat="item in items.slice().reverse() | filter:query"  class="container row game">
+    <div ng-repeat="item in items | filter:query"  class="container row game">
 
       <section class="gen_details col-md-2"> 
         {{item.date}} <br> 
