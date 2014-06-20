@@ -1,0 +1,36 @@
+<header>
+  <h1>WORLD CUP</h1>
+</header>
+
+<div class="container box">
+  <div ng-controller="MyController">
+
+    <button type="button" ng-click="getItems()" class="btn get_results">Get Results</button>
+    <div ng-repeat="item in items"  class="container row">
+
+      <section class="gen_details col-md-2"> 
+        {{item.date}} <br> 
+        {{item.group}} <br> 
+        {{item.stadium}} <br>
+        {{item.city}} <br>
+      </section>
+
+      <section class="home col-md-4">
+        {{item.home}}
+      </section>
+
+      <section class="score col-md-2">
+        {{item.score}}
+      </section>
+
+      <section class="away col-md-4">
+        {{item.away}}
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p><span class="glyphicon glyphicon-heart"></span></p>
+</footer>
