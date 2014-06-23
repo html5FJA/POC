@@ -27,6 +27,10 @@ header, footer {
 	border-bottom: 1px solid gray;
 }
 
+.filter {
+	margin: 2%;
+}
+
 section img {
     border: 1px solid gray;
 }

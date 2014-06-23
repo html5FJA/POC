@@ -4,13 +4,15 @@
 
 <div class="container box">
   <div ng-controller="MyController" ng-init="getResults()">
+    
     <ul class="nav nav-tabs">
-      <li class="active" ng-click="getResults()"><a>Get Results</a></li>
-      <li ng-click="getSchedule()"><a>Scheduled Games</a></li>
-      <li ng-click="getLive()"><a>Live Games</a></li>
+      <li class="col-xs-4" ng-click="getResults()"><a>Match Results</a></li>
+      <li class="col-xs-4" ng-click="getSchedule()"><a>Scheduled Matches</a></li>
+      <li class="col-xs-4" ng-click="getLive()"><a>Live Match</a></li>
     </ul>
-
-    <input ng-model="query" placeholder="Filter">
+    <secion class="filter">
+      <input ng-model="query" placeholder="Filter">
+    <section>
     <div ng-repeat="item in items | filter:query"  class="container row game">
 
       <section class="gen_details col-md-2"> 
@@ -27,6 +29,7 @@
 
       <section class="score col-md-2">
         {{item.score}}
+        {{item.time}}
       </section>
 
       <section class="away col-md-4">
