@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('pocApp')
-  .controller('MainCtrl', function ($scope, $location) {
+  .controller('MainCtrl', ['$scope', '$location', function ($scope, $location) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
     $scope.currentUrl = $location.path;
-  });
+  }]);
 
 function MyController($scope, $http) {
     $scope.items = [];
