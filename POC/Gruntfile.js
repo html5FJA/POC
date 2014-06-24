@@ -239,6 +239,40 @@ module.exports = function (grunt) {
       }
     },
 
+    buildcontrol: {
+    options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+    },
+    heroku: {
+        options: {
+            remote: 'git@heroku.com:wcpoc-front.git',
+            branch: 'master'
+        }
+    }
+  },
+
+  // Empties folders to start fresh
+clean: {
+    dist: {
+        files: [{
+            dot: true,
+            src: [
+                '.tmp',
+                '<%= yeoman.dist %>/*',
+                '!<%= yeoman.dist %>/.git*',
+                '!<%= yeoman.dist %>/Procfile',
+                '!<%= yeoman.dist %>/package.json',
+                '!<%= yeoman.dist %>/web.js',
+                '!<%= yeoman.dist %>/node_modules'
+           ]
+        }]
+    },
+    server: '.tmp'
+},
+
     // ngmin tries to make the code safe for minification automatically by
     // using the Angular long form for dependency injection. It doesn't work on
     // things like resolve or inject so those have to be done manually.
@@ -392,4 +426,6 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('deploy', ['buildcontrol']);
 };
