@@ -396,11 +396,11 @@ clean: {
     'concurrent:dist',
     'autoprefixer',
     'concat',
-    'ngmin',
+   // 'ngmin',
     'copy:dist',
     'cdnify',
     'cssmin',
-    'uglify',
+    //'uglify',
     'rev',
     'usemin',
     'htmlmin'
