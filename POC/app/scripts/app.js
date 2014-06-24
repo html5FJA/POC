@@ -11,7 +11,23 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+        activetab: 'results'
+      })
+      .when('/results', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl',
+        activetab: 'results'
+      })
+      .when('/schedule', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl',
+        activetab: 'schedule'
+      })
+      .when('/live', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl',
+        activetab: 'live'
       })
       .otherwise({
         redirectTo: '/'
@@ -29,3 +45,17 @@ app.filter('nospace', function () {
         return (!value) ? '' : value.replace(/ /g, '');
     };
 });
+
+var menu = document.querySelector('.nav nav-tabs');
+var anchors = menu.getElementsByTagName('a');
+
+for (var i = 0; i < anchors.length; i += 1) {
+  anchors[i].addEventListener('click', function() { clickHandler(anchors[i]) }, false);
+}
+
+function clickHandler(anchor) {
+  var hasClass = anchor.getAttribute('class');
+  if (hasClass !== 'active') {
+    anchor.setAttribute('class', 'active');
+  }
+}

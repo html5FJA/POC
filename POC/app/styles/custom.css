@@ -1,3 +1,19 @@
+@media screen and (max-width: 568px) {
+	.nav a{
+		font-size: 10px;
+	}
+	
+	.nav a:nth-of-type(1){
+		margin-left: 0px;
+		margin-right: 0px;
+		padding: 0;
+	}
+	
+	h1{
+		font-size: 60px;
+	}
+}
+
 body {
 	background-image: url("/images/testWP.png");
 	background-size: 100%;
@@ -5,10 +21,29 @@ body {
 	font-weight: bold;
 }
 
+header{
+	margin-bottom: 15px;
+	vertical-align: middle;
+}
+
+h1{
+	color: #36B030;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 100px;
+}
+
 header, footer {
 	text-align: center;
-	color: white;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	
+	/*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+}
+
+.nav a{
+	color: #36B030;
+}
+
+.nav a.active{
+	color: green;
 }
 
 .home, .gen_details, .score, .away {
@@ -37,4 +72,16 @@ section img {
 
 input {
 	margin: auto;
+}
+
+.matchData{
+	margin-bottom: 0px;
+}
+
+.gen_details p:nth-of-type(odd){
+	color: #36B030;
+}
+
+.gen_details p:nth-of-type(even){
+	color: #555555;
 }

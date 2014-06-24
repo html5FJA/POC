@@ -14,7 +14,7 @@ function MyController($scope, $http) {
     $scope.items = [];
     $scope.getResults = function() {
 	  	//$http({method : 'GET',url : 'http://192.168.89.15:8080/worldcup/v1/results'})
-	  	$http({method : 'GET',url : 'http://localhost:8080/worldcup/v1/results'})
+	  	$http({method : 'GET',url : 'http://wcpoc.herokuapp.com/worldcup/v1/results'})
 	  		.success(function(data, status) {
 	            $scope.items = data;
 	            data.reverse();
@@ -24,10 +24,11 @@ function MyController($scope, $http) {
 	            });
 	      	$scope.$apply();
   	}
+	$scope.getResults();
 
   $scope.getSchedule = function() {
 	  	//$http({method : 'GET',url : 'http://192.168.89.15:8080/worldcup/v1/schedule'})
-	  	$http({method : 'GET',url : 'http://localhost:8080/worldcup/v1/schedule'})
+	  	$http({method : 'GET',url : 'http://wcpoc.herokuapp.com/worldcup/v1/schedule'})
 	  		.success(function(data, status) {
 	            $scope.items = data;
 	            })
@@ -39,7 +40,7 @@ function MyController($scope, $http) {
 
   	$scope.getLive = function() {
 	  	//$http({method : 'GET',url : 'http://192.168.89.15:8080/worldcup/v1/live'})
-	  	$http({method : 'GET',url : 'http://localhost:8080/worldcup/v1/live'})
+	  	$http({method : 'GET',url : 'http://wcpoc.herokuapp.com/worldcup/v1/live'})
 	  		.success(function(data, status) {
 	            $scope.items = data;
 	            data.reverse();
@@ -48,7 +49,14 @@ function MyController($scope, $http) {
 	                alert("Error");
 	            });
 	    $scope.$apply();
-  	}};
+  	}
+    };
+	
 
-
+function HeaderController($scope, $location) 
+{ 
+    $scope.isActive = function (viewLocation) { 
+        return viewLocation === $location.path();
+    };
+}
   

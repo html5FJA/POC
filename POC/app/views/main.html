@@ -1,38 +1,40 @@
-<header>
-  <h1>WORLD CUP</h1>
+<header class="container box">
+  <h1>Brasil <img src="images/logo.png" class="image-responsive" /> 2014</h1>
 </header>
 
 <div class="container box">
-  <div ng-controller="MyController" ng-init="getResults()">
+  <div ng-controller="MyController" >
     
-    <ul class="nav nav-tabs">
-      <li class="col-xs-4" ng-click="getResults()"><a>Match Results</a></li>
+    <ul class="nav nav-tabs" ng-controller="HeaderController">
+      <li class="active col-xs-4" ng-click="getResults()"><a>Match Results</a></li>
       <li class="col-xs-4" ng-click="getSchedule()"><a>Scheduled Matches</a></li>
       <li class="col-xs-4" ng-click="getLive()"><a>Live Match</a></li>
     </ul>
     <secion class="filter">
-      <input ng-model="query" placeholder="Filter">
+      <p></p>
+      <input type="text" class="form-control" ng-model="query" placeholder="Filter">
+      <p></p>
     <section>
     <div ng-repeat="item in items | filter:query"  class="container row game">
 
       <section class="gen_details col-md-2"> 
-        {{item.date}} <br> 
-        {{item.group}} <br> 
-        {{item.stadium}} <br>
-        {{item.city}} <br>
+        <p class="matchData">{{item.date}} </p>
+        <p class="matchData">{{item.group}} </p>
+        <p class="matchData">{{item.stadium}} </p>
+        <p class="matchData">{{item.city}} </p>
       </section>
 
-      <section class="home col-md-4">
+      <section class="home col-xs-4">
         <img src="{{item.hFlag}}" class="image-responsive">
         {{item.home}}
       </section>
 
-      <section class="score col-md-2">
+      <section class="score col-xs-2">
         {{item.score}}
         {{item.time}}
       </section>
 
-      <section class="away col-md-4">
+      <section class="away col-xs-4">
         <img src="{{item.aFlag}}" class="image-responsive">
         {{item.away}}
       </section>
@@ -44,3 +46,15 @@
 <footer class="footer">
   <p><span class="glyphicon glyphicon-heart"></span></p>
 </footer>
+
+<script>
+  
+$(document).ready(function () {
+        $('ul.nav > li').click(function (e) {
+            e.preventDefault();
+            $('ul.nav > li').removeClass('active');
+            $(this).addClass('active');                
+        });            
+    });
+
+</script>
