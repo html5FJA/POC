@@ -113,21 +113,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // Empties folders to start fresh
-    clean: {
-      dist: {
-        files: [{
-          dot: true,
-          src: [
-            '.tmp',
-            '<%= yeoman.dist %>/*',
-            '!<%= yeoman.dist %>/.git*'
-          ]
-        }]
-      },
-      server: '.tmp'
-    },
-
     // Add vendor prefixed styles
     autoprefixer: {
       options: {
