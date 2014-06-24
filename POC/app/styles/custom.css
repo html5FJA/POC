@@ -1,17 +1,25 @@
 @media screen and (max-width: 568px) {
 	.nav a{
-		font-size: 10px;
+		font-size: 9px;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding: 5px;
 	}
 	
 	.nav a:nth-of-type(1){
 		margin-left: 0px;
 		margin-right: 0px;
-		padding: 0;
+		padding-left: 5px;
 	}
 	
-	h1{
-		font-size: 60px;
+	h3{
+		font-size: 30px;
 	}
+}
+
+#scheduled{
+	padding-right: 10px;
+	margin-right: 10px;
 }
 
 body {
@@ -26,10 +34,10 @@ header{
 	vertical-align: middle;
 }
 
-h1{
+h3{
 	color: #36B030;
 	font-family: 'Permanent Marker', cursive;
-	font-size: 100px;
+	font-size: 30px;
 }
 
 header, footer {
