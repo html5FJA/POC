@@ -40,13 +40,13 @@ angular
  * Usage:
  *   {{some_text | nospace}}
  */
-app.filter('nospace', function () {
+/*app.filter('nospace', function () {
     return function (value) {
         return (!value) ? '' : value.replace(/ /g, '');
     };
-});
+});*/
 
-var menu = document.querySelector('.nav nav-tabs');
+/*var menu = document.querySelector('.nav nav-tabs');
 var anchors = menu.getElementsByTagName('a');
 
 for (var i = 0; i < anchors.length; i += 1) {
@@ -58,4 +58,4 @@ function clickHandler(anchor) {
   if (hasClass !== 'active') {
     anchor.setAttribute('class', 'active');
   }
-}
+}*/

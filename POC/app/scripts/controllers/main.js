@@ -22,7 +22,7 @@ function MyController($scope, $http) {
 	            .error(function(data, status) {
 	                alert("Error");
 	            });
-	      	$scope.$apply();
+	      	//$scope.$apply();
   	}
 	$scope.getResults();
 
@@ -35,7 +35,7 @@ function MyController($scope, $http) {
 	            .error(function(data, status) {
 	                alert("Error");
 	            });
-	      $scope.$apply();
+	      //$scope.$apply();
   	}
 
   	$scope.getLive = function() {
@@ -48,7 +48,7 @@ function MyController($scope, $http) {
 	            .error(function(data, status) {
 	                alert("Error");
 	            });
-	    $scope.$apply();
+	    //$scope.$apply();
   	}
     };
 	
